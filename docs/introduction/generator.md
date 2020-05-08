@@ -26,6 +26,7 @@ The path where the generated Atoms will be written to. The path is relative to y
 This is the name of the type that you want to generate. Lets say you want to create your own struct and generate Atoms for it:
 
 ```cs
+[Serializable]
 public struct MyStruct
 {
     public int Number;
@@ -42,6 +43,7 @@ Is the type provided in the above field implementing [`IEquatable`](https://docs
 ```cs
 using System;
 
+[Serializable]
 public struct MyStruct : IEquatable<MyStruct>
 {
     public int Number;
@@ -73,6 +75,7 @@ Enter the namespace of the type that you have provided. If for example `MyStruct
 ```cs
 namespace MyNamespace
 {
+    [Serializable]
     public struct MyStruct : IEquatable<MyStruct>
     {
         // ...
@@ -103,7 +106,7 @@ This is a list of Atom types that you want to generate. Simply select the Atoms 
 -   Pair Unity Event - depends on Pair.
 -   Variable - depends on Event, Pair Event, Pair and Function x 2
 -   Variable Instancer - depsends on Variable, Event, Pair Event, Function x 2 and Pair.
--   Event Instancer - depsends on Event.
+-   Event Instancer - depsends on Event.dfds
 -   Pair Event Instancer - depsends on Event and Pair.
 
 ### Close & Generate
